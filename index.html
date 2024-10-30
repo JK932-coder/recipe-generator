@@ -7,8 +7,10 @@
     <title>AI Recipe Generator</title>
   </head>
   <body>
+    <div class="container">
     <header>
-      <h1>AI Recipe Generator</h1>
+        <h1>AI Recipe Generator</h1>
+        <img src="https://i.postimg.cc/N0wg1ZWq/undraw-Cooking-p7m1.png"/>
     </header>
     <main>
       <form>
@@ -18,10 +20,11 @@
           autofocus
           required
           autocomplete="off"
+          class="instructions"
         />
-        <input type="submit" />
+        <input type="submit" class="submit-button" />
       </form>
-      <div>The recipe will go here</div>
+      <div class="recipe">The recipe will go here</div>
     </main>
     <footer>
       This AI project was coded by
@@ -39,6 +42,7 @@
         >Netlify</a
       >
     </footer>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
