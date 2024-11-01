@@ -15,10 +15,11 @@
         <img src="https://i.postimg.cc/N0wg1ZWq/undraw-Cooking-p7m1.png" />
       </header>
       <main>
+        <div class="form-container">
         <form id="recipe-generator-form">
           <input
             type="text"
-            placeholder="Enter ingredient to generate the recipe"
+            placeholder="Enter the ingredient to generate the recipe"
             autofocus
             required
             autocomplete="off"
@@ -27,7 +28,9 @@
           />
           <input type="submit" class="submit-button" />
         </form>
-        <div class="recipe" id="recipe"></div>
+        <div class="hint">i.e: chicken,salmon, banana</div>
+        </div>
+        <div class="recipe hidden" id="recipe"></div>
       </main>
       <footer>
         This AI project was coded by

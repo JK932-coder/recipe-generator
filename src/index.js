@@ -1,5 +1,4 @@
 function displayRecipe(response) {
-   console.log("recipe generated"); 
     new Typewriter("#recipe", {
       strings: response.data.answer, 
       autoStart: true,
@@ -15,9 +14,15 @@ let instructionsInput = document.querySelector("#user-input");
   let prompt=`User instructions:Generate a recipe about ${instructionsInput.value}`;
   let context="You are a chef that knows a lot of recipes and love to prepare dishes that are quick to make.Your mission is to generate a very quick recipe in simple HTML. Do not include the word html into your response.Organize the recipe into ingredients and Method.Make sure to follow the user instructions."; 
   let apiUrl =`https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
-console.log("Generating a recipe"); 
-  console.log(`Prompt:${prompt}`); 
-console.log(`Context:${context}`); 
+
+  let recipeElement=document.querySelector("#recipe"); 
+  recipeElement.classList.remove("hidden"); 
+   recipeElement.innerHTML = `
+                <div class="message">
+                    <div class="spinner"></div>
+                    <span>Generating the recipe for you using ${instructionsInput.value} 👨‍🍳</span>
+                </div>
+            `;
   axios.get(apiUrl).then(displayRecipe);
 }
 
