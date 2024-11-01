@@ -3,45 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>AI Recipe Generator</title>
   </head>
   <body>
     <div class="container">
-    <header>
+      <header>
         <h1>AI Recipe Generator</h1>
-        <img src="https://i.postimg.cc/N0wg1ZWq/undraw-Cooking-p7m1.png"/>
-    </header>
-    <main>
-      <form>
-        <input
-          type="text"
-          placeholder="Enter ingredient to generate the recipe"
-          autofocus
-          required
-          autocomplete="off"
-          class="instructions"
-        />
-        <input type="submit" class="submit-button" />
-      </form>
-      <div class="recipe">The recipe will go here</div>
-    </main>
-    <footer>
-      This AI project was coded by
-      <a href="https://github.com/JK932-coder" target="_blank">
-        Jekaterina Valeviciene</a
-      >
-      and is open-sourced on
-      <a href="https://github.com/JK932-coder/recipe-generator" target="_blank"
-        >GitHub</a
-      >
-      and is hosted on
-      <a
-        href="https://app.netlify.com/sites/recipe-generator-jk/overview"
-        target="_blank"
-        >Netlify</a
-      >
-    </footer>
+        <img src="https://i.postimg.cc/N0wg1ZWq/undraw-Cooking-p7m1.png" />
+      </header>
+      <main>
+        <form id="recipe-generator-form">
+          <input
+            type="text"
+            placeholder="Enter ingredient to generate the recipe"
+            autofocus
+            required
+            autocomplete="off"
+            class="instructions"
+          />
+          <input type="submit" class="submit-button" />
+        </form>
+        <div class="recipe" id="recipe"></div>
+      </main>
+      <footer>
+        This AI project was coded by
+        <a href="https://github.com/JK932-coder" target="_blank">
+          Jekaterina Valeviciene</a
+        >
+        and is open-sourced on
+        <a href="https://github.com/JK932-coder/recipe-generator" target="_blank"
+          >GitHub</a
+        >
+        and is hosted on
+        <a
+          href="https://app.netlify.com/sites/recipe-generator-jk/overview"
+          target="_blank"
+          >Netlify</a
+        >
+      </footer>
     </div>
     <script src="src/index.js"></script>
   </body>
